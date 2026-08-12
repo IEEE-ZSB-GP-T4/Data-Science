@@ -32,20 +32,21 @@ public function getDashboard($userId)
     
     return response()->json(['error' => 'Failed to process data'], 500);
 }
-
+```
 
 ### 3. Frontend Role (React)
 The React frontend does not need to build charts from scratch using raw data. The JSON already contains the exact structure (data and layout) required by Plotly.
 
-How to integrate:
+*How to integrate:*
 
-Install the Plotly React wrapper:
+**Install the Plotly React wrapper:**
 
-Bash
+```Bash
 npm install react-plotly.js plotly.js
 Fetch the JSON via Axios and pass it directly to the Plotly component:
 
-JavaScript
+```jsx
+
 import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
@@ -82,7 +83,7 @@ const Dashboard = ({ userId }) => {
 };
 
 export default Dashboard;
-
+```
 
 ## Branching Strategy
 
