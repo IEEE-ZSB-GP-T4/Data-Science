@@ -29,9 +29,5 @@ def generate_dashboard_response(user_id):
     # making the response into a json form
     return json.dumps(final_response, ensure_ascii=False, indent=4, default=str)
 
-# for testing
-if __name__ == "__main__":
-    test_user_id = 1
-    output = generate_dashboard_response(test_user_id)
-    print(output)
+
     
